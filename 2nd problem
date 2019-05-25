@@ -1,0 +1,47 @@
+#include<iostream>
+ 
+using namespace std;
+ 
+int main(){
+	int a[50]; 
+	int n, temp;
+	
+	cout << "Problem 2" << endl;
+	cout << "" << endl;
+	cout << "" << endl;
+	
+	cout << "Selection Sorting...";
+	cout << "" << endl;
+	
+	cout << "Enter the array size: ";
+	cin >> n;
+	cout << "" << endl;
+	cout << "Enter the " << n << " elements: "; 
+	
+	for(int e = 0; e < n; e++){
+		cin >> a[e];
+	}
+	cout << "" << endl;
+	cout << "Your data: ";
+	for(int f = 0; f < n; f++){
+		cout << " " << a[f];
+	}
+    
+    
+	for(int b = 1; b < n; b++)
+	{
+		for(int c = 0; c < (n - b); c++){
+			if(a[c] > a[c + 1]){
+				temp = a[c];
+				a[c] = a[c + 1];
+				a[c + 1] = temp;
+			}
+		}	
+	}
+	cout << "" << endl;
+	cout<<"\nArray after bubble sort:";
+	for(int d = 0; d < n; d++){
+		cout << " " << a[d];
+	}	
+	return 0;
+}
